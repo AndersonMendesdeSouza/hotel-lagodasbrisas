@@ -39,7 +39,7 @@ export default function RoomPhotos({ photos, roomName, detailsPath, variant = 'c
   }
 
   return (
-    <div className={styles[variant]} role="region" aria-roledescription="carrossel" aria-label={`Fotos de ${roomName}`}>
+    <div className={styles[variant]} role="region" aria-roledescription="carrossel" aria-label={`Fotos de ${roomName}`} data-reveal={variant === 'details' ? '' : undefined}>
       <div className={styles.photoFrame}>
         <div
           className={styles.viewport}

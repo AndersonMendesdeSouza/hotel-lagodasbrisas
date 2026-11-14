@@ -4,6 +4,7 @@
   height: min(760px, calc(100svh - 96px));
   color: white;
   isolation: isolate;
+  overflow: hidden;
 }
 
 .heroImage, .heroShade {
@@ -16,6 +17,22 @@
 
 .heroImage {
   object-position: center 43%;
+  animation: arriveZoom 1.2s cubic-bezier(.22, 1, .36, 1);
+}
+
+@keyframes arriveZoom {
+  from {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroImage {
+    animation: none;
+  }
 }
 
 .heroShade {

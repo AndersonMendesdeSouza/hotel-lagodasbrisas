@@ -2,9 +2,9 @@
   min-width: 0;
   overflow: hidden;
   border: 1px solid #d8ddd2;
-  border-radius: 16px;
+  border-radius: var(--photo-radius);
   background: var(--cream);
-  box-shadow: 0 4px 16px #292e2912;
+  box-shadow: var(--photo-shadow);
   transition: border-color .2s, box-shadow .2s;
 }
 

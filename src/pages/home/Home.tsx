@@ -9,6 +9,8 @@ import Footer from '../../components/Footer'
 import Icon from '../../components/Icon'
 import SectionLink from '../../components/SectionLink'
 import { hotel } from '../../data/hotel'
+import lakeAerial from '../../assets/lago/image.png'
+import lakeGarden from '../../assets/lago/image2.png'
 
 export default function Home() {
   return (
@@ -46,8 +48,8 @@ export default function Home() {
         </section>
         <section className={`${styles.aboutSection} ${ui.sectionSpace} ${ui.container}`} id="hotel" aria-labelledby="about-title" data-reveal>
           <div className={styles.aboutImages}>
-            <img className={styles.aboutMain} src="/images/piscina.jpg" alt="Piscina do Hotel Lago das Brisas em um dia de sol" width="1600" height="1000" loading="lazy" />
-            <img className={styles.aboutDetail} src="/images/jardim.jpg" alt="Quiosque e jardins do hotel" width="800" height="600" loading="lazy" />
+            <img className={styles.aboutMain} src={lakeAerial} alt="Vista aérea do Lago das Brisas com embarcações e a margem arborizada" width="416" height="482" loading="lazy" />
+            <img className={styles.aboutDetail} src={lakeGarden} alt="Caminho entre palmeiras com vista para o Lago das Brisas" width="418" height="510" loading="lazy" />
             <span className={styles.imageCaption}>NATUREZA QUE ACOLHE. MEMÓRIAS QUE FICAM.</span>
           </div>
           <div className={styles.aboutCopy}>
@@ -117,10 +119,10 @@ export default function Home() {
         <section className={`${styles.boatSection} ${ui.sectionSpace} ${ui.container}`} id="guarda-barcos" aria-labelledby="boat-title" data-reveal>
           <figure className={styles.boatPhoto}>
             <img
-              src="/images/guarda-barcos.jpg"
-              alt="Imagem ilustrativa de pequenas embarcações armazenadas em espaço coberto"
-              width="1200"
-              height="800"
+              src="/images/marina-barcos.jpg"
+              alt="Imagem ilustrativa de barcos e lanchas atracados em uma marina, vistos de cima"
+              width="1400"
+              height="1050"
               loading="lazy"
             />
             <figcaption>Imagem ilustrativa · Não representa o guarda-barcos real do hotel</figcaption>

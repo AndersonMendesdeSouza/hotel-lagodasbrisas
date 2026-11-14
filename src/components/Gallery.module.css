@@ -28,6 +28,8 @@
   border: 0;
   padding: 0;
   overflow: hidden;
+  border-radius: var(--photo-radius);
+  box-shadow: var(--photo-shadow);
   background: var(--green);
   color: white;
   text-align: left;
@@ -77,6 +79,9 @@
 }
 
 .galleryDialog {
+  overflow: hidden auto;
+  border-radius: var(--photo-radius);
+  box-shadow: var(--photo-shadow);
   width: min(1100px, calc(100% - 32px));
   max-height: 94svh;
   background: var(--green-dark);

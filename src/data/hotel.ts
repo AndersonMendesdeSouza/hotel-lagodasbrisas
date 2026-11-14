@@ -96,4 +96,5 @@ export const gallery = [
 // quarto-natureza-1.jpg: https://www.pexels.com/photo/cozy-hotel-room-with-neatly-made-bed-33753444/
 // quarto-natureza-2.jpg: https://www.pexels.com/photo/contemporary-hotel-room-with-a-double-bed-5539613/
 // guarda-barcos.jpg: https://www.pexels.com/photo/boats-stored-in-warehouse-12324262/
+// marina-barcos.jpg: https://www.pexels.com/photo/aerial-photography-of-motorboats-docked-at-the-marina-12116615/
 // Substituir pelos arquivos atuais fornecidos pelo hotel para a versão definitiva.
