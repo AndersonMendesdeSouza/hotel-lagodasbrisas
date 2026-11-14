@@ -1,0 +1,186 @@
+.heroSection {
+  position: relative;
+  min-height: 640px;
+  height: min(760px, calc(100svh - 96px));
+  color: white;
+  isolation: isolate;
+}
+
+.heroImage, .heroShade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.heroImage {
+  object-position: center 43%;
+}
+
+.heroShade {
+  background: linear-gradient(90deg, #102a23b8, #142a2360 60%, #10271e20), linear-gradient(0deg, #0a2419a6, transparent 45%);
+}
+
+.heroContent {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-bottom: 18px;
+}
+
+.heroLocation {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 10px;
+  letter-spacing: 2.6px;
+  margin-bottom: 27px;
+}
+
+.heroLocation > span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--sand);
+}
+
+.heroContent h1 {
+  font-size: clamp(62px, 6.4vw, 92px);
+  line-height: .99;
+  letter-spacing: -2.7px;
+  margin-left: -4px;
+}
+
+.heroContent h1 em {
+  color: #ead9b6;
+}
+
+.heroContent p {
+  color: #f4f0e5e0;
+  font-size: 14px;
+  line-height: 1.85;
+  margin-top: 28px;
+}
+
+.heroActions {
+  display: flex;
+  align-items: center;
+  gap: 33px;
+  margin-top: 35px;
+}
+
+.heroSecondary {
+  font-size: 12px;
+  padding-block: 13px;
+  border-bottom: 1px solid #ffffff60;
+}
+
+.heroSecondary span {
+  margin-left: 20px;
+}
+
+.heroBottom {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 29px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ffffff30;
+  padding-top: 22px;
+}
+
+.heroBottom > span {
+  font-size: 11px;
+  color: #eeeee2d9;
+}
+
+.heroBottom > a {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.heroBottom > a span {
+  font-size: 19px;
+}
+
+.heroSideLabel {
+  position: absolute;
+  right: 25px;
+  top: 45%;
+  writing-mode: vertical-rl;
+  font-size: 8px;
+  letter-spacing: 2.7px;
+  color: #ffffffa8;
+}
+
+@media (max-width: 760px) {
+  .heroSection {
+    min-height: 650px;
+    height: calc(90svh - 80px);
+    max-height: 850px;
+  }
+  .heroContent {
+    padding-bottom: 40px;
+  }
+  .heroContent h1 {
+    font-size: clamp(49px, 9.1vw, 67px);
+    letter-spacing: -1.9px;
+  }
+  .heroLocation {
+    font-size: 9px;
+    margin-bottom: 24px;
+  }
+  .heroContent p {
+    max-width: 330px;
+    font-size: 13px;
+  }
+  .heroActions {
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 27px;
+  }
+  .heroActions > a:first-child {
+    padding-inline: 16px;
+    gap: 15px;
+    font-size: 11px;
+  }
+  .heroSideLabel {
+    display: none;
+  }
+  .heroBottom {
+    bottom: 22px;
+    padding-top: 17px;
+  }
+  .heroBottom > span {
+    font-size: 9px;
+  }
+  .heroBottom > a {
+    font-size: 8px;
+    gap: 12px;
+  }
+  .heroShade {
+    background: linear-gradient(90deg,#102a23b3,#142a234d),linear-gradient(0deg,#0a241999,transparent);
+  }
+}
+
+@media (max-width: 390px) {
+  .heroActions {
+    gap: 16px;
+  }
+  .heroSecondary {
+    font-size: 11px;
+  }
+  .heroSecondary span {
+    margin-left: 6px;
+  }
+  .heroContent h1 {
+    font-size: 46px;
+  }
+}
+

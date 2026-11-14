@@ -1,0 +1,141 @@
+.card,
+.details {
+  min-width: 0;
+}
+
+.photoFrame {
+  position: relative;
+  background: #e4e6da;
+}
+
+.viewport {
+  display: flex;
+  height: 280px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.details .viewport {
+  height: clamp(300px, 40vw, 550px);
+}
+
+.slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  height: 100%;
+  scroll-snap-align: start;
+}
+
+.slide > a {
+  display: block;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+}
+
+.photoTag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 7px 10px;
+  background: #faf9f5ed;
+  color: var(--green);
+  font-size: 8px;
+  letter-spacing: .7px;
+  pointer-events: none;
+}
+
+.photoControl {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid #ffffff50;
+  color: white;
+  background: var(--green);
+}
+
+.photoControl:hover {
+  background: var(--green-dark);
+}
+
+.previous {
+  left: 12px;
+}
+
+.previous svg {
+  transform: rotate(180deg);
+}
+
+.next {
+  right: 12px;
+}
+
+.counter {
+  position: absolute;
+  bottom: 13px;
+  right: 13px;
+  padding: 6px 10px;
+  background: var(--green);
+  color: white;
+  font-size: 10px;
+  pointer-events: none;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 6px;
+  margin: 10px -6px 0;
+}
+
+.thumbnails > button {
+  flex: 0 0 120px;
+  height: 80px;
+  padding: 3px;
+  border: 2px solid transparent;
+  background: transparent;
+  opacity: .65;
+}
+
+.thumbnails > button:hover,
+.thumbnails > .activeThumbnail {
+  border-color: var(--green);
+  opacity: 1;
+}
+
+.thumbnails img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1100px) {
+  .card .viewport {
+    height: 230px;
+  }
+}
+
+@media (max-width: 760px) {
+  .card .viewport {
+    height: 280px;
+  }
+
+  .thumbnails > button {
+    flex-basis: 95px;
+    height: 65px;
+  }
+}

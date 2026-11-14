@@ -1,0 +1,676 @@
+.skipLink {
+  border: 0;
+  position: fixed;
+  top: -100px;
+  left: 20px;
+  padding: 14px;
+  background: var(--sand);
+  color: var(--green);
+  z-index: 100;
+}
+
+.skipLink:focus {
+  top: 10px;
+}
+
+.welcomeStrip {
+  background: #eeeee4;
+  border-bottom: 1px solid #e1e3d7;
+}
+
+.welcomeStrip > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 24px;
+  gap: 24px;
+}
+
+.welcomeStrip span, .welcomeStrip a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 10px;
+}
+
+.welcomeStrip span > svg {
+  width: 20px;
+  color: #7c8c6b;
+}
+
+.welcomeStrip a {
+  border-left: 1px solid #c6ceba;
+  padding-left: 29px;
+  font-weight: 600;
+}
+
+.welcomeStrip a > svg {
+  width: 17px;
+}
+
+.aboutSection {
+  display: grid;
+  grid-template-columns: 1.12fr 1fr;
+  gap: 105px;
+  align-items: center;
+}
+
+.aboutImages {
+  position: relative;
+  padding: 0 48px 60px 0;
+}
+
+.aboutMain {
+  width: 100%;
+  height: 440px;
+  object-position: 32% center;
+}
+
+.aboutDetail {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 52%;
+  height: 235px;
+  border: 8px solid var(--cream);
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.imageCaption {
+  position: absolute;
+  bottom: 22px;
+  left: 0;
+  font-size: 7px;
+  letter-spacing: 1.7px;
+  max-width: 40%;
+  line-height: 1.8;
+}
+
+.aboutCopy h2 {
+  margin-top: 22px;
+}
+
+.aboutCopy > p {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 22px;
+  max-width: 355px;
+}
+
+.aboutCopy > a {
+  margin-top: 27px;
+}
+
+.aboutLocation {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  border-top: 1px solid var(--border);
+  margin-top: 32px;
+  padding-top: 22px;
+  font-size: 10px;
+  line-height: 1.9;
+  color: var(--muted);
+}
+
+.aboutLocation > svg {
+  width: 20px;
+}
+
+.aboutLocation strong {
+  font-weight: 500;
+  color: var(--green);
+}
+
+.roomsSection {
+  background: #efefe5;
+}
+
+.sectionHeading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 43px;
+}
+
+.sectionHeading h2 {
+  margin-top: 17px;
+}
+
+.sectionHeading > p {
+  font-size: 12px;
+  color: var(--muted);
+  padding-bottom: 4px;
+}
+
+.sectionNote {
+  font-size: 10px;
+  color: #7a8377;
+  margin-top: 33px;
+  padding-top: 20px;
+  border-top: 1px solid #d4d9ca;
+}
+
+.experiencesLayout {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 70px;
+}
+
+.experienceFeature {
+  position: relative;
+  min-height: 480px;
+  overflow: hidden;
+  color: white;
+}
+
+.experienceFeature::after {
+  content: '';
+  position: absolute;
+  inset: 20% 0 0;
+  background: linear-gradient(transparent,#102a21d9);
+}
+
+.experienceFeature > img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-position: center;
+}
+
+.experienceFeature > div {
+  position: absolute;
+  bottom: 35px;
+  left: 35px;
+  z-index: 1;
+}
+
+.experienceFeature h3 {
+  font-size: 43px;
+  margin-top: 16px;
+  line-height: 1.03;
+}
+
+.experienceFeature p {
+  font-size: 11px;
+  color: #f4f3e8cf;
+  margin-top: 18px;
+}
+
+.experienceFeature > div > span {
+  color: var(--sand);
+  font-size: 8px;
+}
+
+.experienceList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.experienceList article {
+  display: flex;
+  gap: 25px;
+  padding-block: 26px;
+  border-bottom: 1px solid var(--border);
+}
+
+.experienceList article:first-child {
+  padding-top: 0;
+}
+
+.experienceList article:last-child {
+  border: 0;
+  padding-bottom: 0;
+}
+
+.experienceNumber {
+  font-family: var(--serif);
+  font-size: 20px;
+  color: #b3b9a6;
+  padding-top: 4px;
+}
+
+.experienceList article > div > svg {
+  color: #82916e;
+  width: 25px;
+  margin-bottom: 13px;
+}
+
+.experienceList h3 {
+  font-size: 27px;
+}
+
+.experienceList p {
+  font-size: 12px;
+  color: var(--muted);
+  max-width: 275px;
+  margin-top: 10px;
+}
+
+.boatSection {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 85px;
+  border-top: 1px solid var(--border);
+}
+
+.boatPhoto {
+  min-width: 0;
+  margin: 0;
+}
+
+.boatPhoto img {
+  width: 100%;
+  height: 440px;
+  object-position: 65% center;
+}
+
+.boatPhoto figcaption {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.boatCopy h2 {
+  margin-top: 20px;
+  font-size: clamp(38px, 4vw, 56px);
+}
+
+.boatCopy > p {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 22px;
+  max-width: 380px;
+}
+
+.boatInformation {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-block: 23px;
+  margin-top: 25px;
+  border-top: 1px solid var(--border);
+}
+
+.boatInformation > svg {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+}
+
+.boatInformation > span {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.boatInformation strong {
+  display: block;
+  margin-top: 7px;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.7;
+  color: var(--green);
+}
+
+.boatCopy > a {
+  margin-top: 5px;
+}
+
+.gastronomySection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--green);
+  color: var(--cream);
+}
+
+.gastronomyPhoto {
+  position: relative;
+  min-height: 490px;
+}
+
+.gastronomyPhoto > img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+
+.gastronomyPhoto::after {
+  content: '';
+  position: absolute;
+  inset: 60% 0 0;
+  background: linear-gradient(transparent,#102a2199);
+}
+
+.gastronomyPhoto > span {
+  position: absolute;
+  left: 35px;
+  bottom: 27px;
+  font-size: 8px;
+  letter-spacing: 2px;
+  z-index: 1;
+}
+
+.gastronomyCopy {
+  padding: 75px clamp(35px, 5.7vw, 100px);
+  align-self: center;
+}
+
+.gastronomyCopy > span {
+  color: var(--sand);
+}
+
+.gastronomyCopy h2 {
+  margin-top: 23px;
+  font-size: clamp(36px, 3.9vw, 54px);
+}
+
+.gastronomyCopy h2 em {
+  color: #e8d6b3;
+}
+
+.gastronomyCopy > p {
+  color: #e4e8d9bd;
+  font-size: 12px;
+  margin-top: 25px;
+  max-width: 350px;
+}
+
+.gastronomyCopy > .gastronomyNote {
+  font-size: 10px;
+  color: #e4e8d99e;
+  margin-top: 14px;
+}
+
+.gastronomyHighlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  margin-top: 24px;
+  padding-block: 16px;
+  border-block: 1px solid #e8d4aa35;
+  color: var(--sand);
+  font-size: 10px;
+}
+
+.gastronomyCopy > a {
+  margin-top: 28px;
+  color: var(--sand);
+  font-size: 11px;
+  border-color: #e8d4aa60;
+}
+
+.interlude {
+  padding: 64px 20px;
+  background: #e5e8db;
+  text-align: center;
+}
+
+.interlude > span {
+  font-size: 8px;
+  color: #718067;
+}
+
+.interlude > p {
+  font-family: var(--serif);
+  font-size: clamp(30px, 3.8vw, 51px);
+  letter-spacing: -.7px;
+  margin-top: 12px;
+}
+
+.interlude > svg {
+  margin-top: 16px;
+  color: #8c9b7b;
+  width: 30px;
+}
+
+.contactSection {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 90px;
+  align-items: center;
+}
+
+.contactCopy h2 {
+  margin-top: 20px;
+}
+
+.contactAddress {
+  display: flex;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.contactAddress > svg {
+  color: #82916e;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.contactAddress p {
+  font-size: 12px;
+}
+
+.contactAddress strong {
+  font-weight: 500;
+}
+
+.contactAddress span {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.contactCopy > p {
+  margin-block: 18px 25px;
+  max-width: 320px;
+  font-size: 11px;
+}
+
+.contactActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px 24px;
+}
+
+.contactInstagram {
+  display: flex;
+  width: fit-content;
+  font-size: 10px;
+  gap: 12px;
+}
+
+.contactInstagram > svg {
+  width: 17px;
+}
+
+.mapFrame {
+  position: relative;
+  height: 430px;
+  background: #e4e7dc;
+}
+
+.mapFrame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: saturate(.65);
+}
+
+.mapLabel {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: var(--cream);
+  box-shadow: 0 4px 15px #1c382f12;
+}
+
+.mapLabel > span {
+  font-size: 9px;
+  color: var(--muted);
+}
+
+.mapLabel strong {
+  display: block;
+  color: var(--green);
+  margin-top: 5px;
+  font-weight: 550;
+  font-size: 12px;
+}
+
+.mapLabel > svg:last-child {
+  margin-left: auto;
+  width: 19px;
+}
+
+@media (max-width: 1100px) {
+  .boatSection {
+    gap: 45px;
+  }
+  .aboutSection {
+    gap: 55px;
+  }
+  .aboutImages {
+    padding-right: 25px;
+  }
+  .experiencesLayout {
+    gap: 40px;
+  }
+  .contactSection {
+    gap: 50px;
+  }
+  .welcomeStrip > div {
+    gap: 14px;
+  }
+  .welcomeStrip span, .welcomeStrip a {
+    font-size: 9px;
+    gap: 8px;
+  }
+  .welcomeStrip a {
+    padding-left: 15px;
+  }
+}
+
+@media (max-width: 760px) {
+  .boatSection {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .boatPhoto img {
+    height: 320px;
+  }
+
+  .boatCopy h2 {
+    font-size: 43px;
+  }
+
+  .boatCopy > p {
+    max-width: 100%;
+  }
+  .welcomeStrip > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-block: 20px;
+    gap: 20px 12px;
+  }
+  .welcomeStrip span, .welcomeStrip a {
+    font-size: 8px;
+  }
+  .welcomeStrip span > svg {
+    width: 17px;
+  }
+  .welcomeStrip a {
+    border: 0;
+    padding-left: 0;
+  }
+  .aboutSection {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .aboutImages {
+    padding-right: 30px;
+    padding-bottom: 48px;
+  }
+  .aboutMain {
+    height: 360px;
+  }
+  .aboutDetail {
+    height: 190px;
+  }
+  .imageCaption {
+    bottom: 13px;
+    font-size: 6px;
+  }
+  .aboutCopy h2 {
+    font-size: 49px;
+  }
+  .aboutCopy > p {
+    max-width: 100%;
+  }
+  .sectionHeading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 32px;
+  }
+  .experiencesLayout {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .experienceFeature {
+    min-height: 420px;
+  }
+  .experienceFeature > div {
+    bottom: 28px;
+    left: 25px;
+  }
+  .experienceFeature h3 {
+    font-size: 39px;
+  }
+  .experienceList p {
+    max-width: 100%;
+  }
+  .gastronomySection {
+    grid-template-columns: 1fr;
+  }
+  .gastronomyPhoto {
+    min-height: 330px;
+  }
+  .gastronomyCopy {
+    padding: 50px 25px 55px;
+  }
+  .gastronomyCopy h2 {
+    font-size: 44px;
+  }
+  .gastronomyCopy > p {
+    max-width: 100%;
+  }
+  .interlude {
+    padding-block: 45px;
+  }
+  .interlude > p {
+    line-height: 1.2;
+    margin-top: 20px;
+  }
+  .contactSection {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+  .mapFrame {
+    height: 360px;
+  }
+}
+

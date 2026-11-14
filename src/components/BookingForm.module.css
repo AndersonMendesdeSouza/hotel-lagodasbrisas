@@ -1,0 +1,169 @@
+.bookingSection {
+  min-width: 0;
+}
+
+.bookingForm {
+  padding: 28px;
+  border: 1px solid #dce0d5;
+  border-radius: 12px;
+  background: var(--cream);
+  box-shadow: 0 4px 18px #292e2908;
+}
+
+.formHeading {
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.formHeading h2 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -.5px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 18px 16px;
+}
+
+.field {
+  display: block;
+  min-width: 0;
+  font-size: 12px;
+  font-weight: 550;
+  line-height: 1.5;
+}
+
+.field input,
+.field select,
+.field textarea {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 46px;
+  padding: 11px 12px;
+  margin-top: 7px;
+  border: 1px solid #d4dacf;
+  border-radius: 6px;
+  background: #fff;
+  color: var(--green-dark);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #858d80;
+  font-size: 13px;
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.field select {
+  padding-right: 24px;
+}
+
+.fullField {
+  grid-column: 1 / -1;
+}
+
+.optional {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.bookingSubmit {
+  width: 100%;
+  min-height: 48px;
+  gap: 10px;
+  padding-inline: 14px;
+  margin-top: 22px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.bookingSubmit > svg {
+  flex-shrink: 0;
+}
+
+.bookingSubmit > svg:first-child {
+  width: 19px;
+}
+
+.bookingSubmit > svg:last-child {
+  width: 18px;
+  margin-left: auto;
+}
+
+.formNote {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.demoContact {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.formError {
+  margin-top: 16px;
+  color: #a22d24;
+  font-size: 12px;
+}
+
+.formSuccess {
+  padding: 12px;
+  margin-top: 16px;
+  border-radius: 6px;
+  color: var(--green);
+  background: #e9efdf;
+  font-size: 12px;
+}
+
+.formSuccess a {
+  text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+  .bookingForm {
+    padding: 22px 20px;
+  }
+
+  .formGrid {
+    gap: 16px 12px;
+  }
+
+  .field input {
+    padding-inline: 8px;
+  }
+
+  .field input,
+  .field select,
+  .field textarea {
+    font-size: 16px;
+  }
+
+  .formHeading h2 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 380px) {
+  .field:has(input[type='date']) {
+    grid-column: 1 / -1;
+  }
+}

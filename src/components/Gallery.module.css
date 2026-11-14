@@ -1,0 +1,155 @@
+.sectionHeading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 43px;
+}
+
+.sectionHeading h2 {
+  margin-top: 16px;
+}
+
+.sectionHeading > p {
+  color: var(--muted);
+  font-size: 12px;
+  padding-bottom: 4px;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr 1fr;
+  grid-template-rows: 210px 210px;
+  gap: 13px;
+}
+
+.galleryPhoto {
+  position: relative;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  background: var(--green);
+  color: white;
+  text-align: left;
+}
+
+.galleryPhoto::after {
+  content: '';
+  position: absolute;
+  inset: 45% 0 0;
+  background: linear-gradient(transparent, #12291db3);
+}
+
+.galleryPhoto img {
+  width: 100%;
+  height: 100%;
+  transition: transform .6s;
+}
+
+.galleryPhoto:hover img {
+  transform: scale(1.04);
+}
+
+.galleryPhoto > span {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1;
+  font-size: 11px;
+}
+
+.galleryPhoto > svg {
+  position: absolute;
+  bottom: 20px;
+  right: 18px;
+  z-index: 1;
+  width: 17px;
+}
+
+.galleryPhoto1 {
+  grid-row: span 2;
+}
+
+.galleryNote {
+  font-size: 10px;
+  color: #7a8377;
+  margin-top: 20px;
+}
+
+.galleryDialog {
+  width: min(1100px, calc(100% - 32px));
+  max-height: 94svh;
+  background: var(--green-dark);
+  color: white;
+}
+
+.galleryDialog > img {
+  width: 100%;
+  height: min(70svh, 720px);
+  object-fit: contain;
+}
+
+.galleryControls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px 22px;
+}
+
+.galleryControls > button {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #ffffff60;
+  color: white;
+  background: transparent;
+}
+
+.galleryPrevious svg {
+  transform: rotate(180deg);
+}
+
+.galleryControls p {
+  font-size: 12px;
+  text-align: center;
+}
+
+.galleryControls p span {
+  color: #ffffff80;
+  margin-left: 15px;
+}
+
+@media (max-width: 760px) {
+  .sectionHeading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+    margin-bottom: 30px;
+  }
+  .galleryGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 290px 180px 180px;
+    gap: 10px;
+  }
+  .galleryPhoto1 {
+    grid-row: span 1;
+    grid-column: span 2;
+  }
+  .galleryPhoto > span {
+    left: 14px;
+    bottom: 15px;
+    font-size: 10px;
+  }
+  .galleryPhoto > svg {
+    width: 14px;
+    bottom: 15px;
+    right: 12px;
+  }
+  .galleryControls p span {
+    display: block;
+    margin: 0;
+  }
+}
+

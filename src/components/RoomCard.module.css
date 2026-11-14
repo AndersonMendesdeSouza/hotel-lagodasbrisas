@@ -1,0 +1,105 @@
+.roomCard {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #d8ddd2;
+  border-radius: 16px;
+  background: var(--cream);
+  box-shadow: 0 4px 16px #292e2912;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.roomCard:hover,
+.roomCard:focus-within {
+  border-color: #b9c2b0;
+  box-shadow: 0 10px 26px #292e2921;
+}
+
+.roomContent {
+  padding: 25px 24px 24px;
+}
+
+.roomContent > span {
+  font-size: 8px;
+  letter-spacing: 1.8px;
+  color: #7d846f;
+}
+
+.roomContent h3 {
+  margin-top: 9px;
+  font-size: 32px;
+}
+
+.roomContent p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.9;
+  margin-top: 14px;
+}
+
+.roomCapacity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 19px;
+}
+
+.roomCapacity svg {
+  width: 16px;
+  height: 16px;
+}
+
+.roomActions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 24px;
+  padding-top: 19px;
+  border-top: 1px solid #d2d7cc;
+}
+
+.roomActions > a:first-child {
+  font-size: 10px;
+  gap: 12px;
+}
+
+.roomBook {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: 0;
+  padding: 0 0 8px;
+  font-size: 10px;
+}
+
+.roomBook:hover {
+  color: #8a6834;
+}
+
+.roomBook svg {
+  width: 17px;
+}
+
+@media (max-width: 1100px) {
+  .roomActions {
+    flex-wrap: wrap;
+  }
+  .roomContent h3 {
+    font-size: 29px;
+  }
+}
+
+@media (max-width: 760px) {
+  .roomContent {
+    padding: 22px 18px;
+  }
+  .roomActions {
+    flex-wrap: nowrap;
+  }
+  .roomContent p {
+    max-width: 480px;
+  }
+}
+

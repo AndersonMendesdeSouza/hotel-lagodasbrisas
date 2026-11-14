@@ -1,0 +1,135 @@
+.siteHeader {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: #faf9f5f5;
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid #e8e8de;
+}
+
+.headerInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  height: 96px;
+}
+
+.brand {
+  flex-shrink: 0;
+}
+
+.brand img {
+  width: 94px;
+  height: 80px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.mainNav {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+
+.mainNav > a {
+  font-size: 11px;
+  font-weight: 500;
+  padding-block: 10px;
+}
+
+.mainNav > a:hover {
+  color: #a17b3e;
+}
+
+.headerBooking {
+  flex-shrink: 0;
+  min-height: 43px;
+  padding: 12px 18px;
+  font-size: 11px;
+}
+
+.menuToggle {
+  display: none;
+}
+
+.mobileBooking {
+  display: none;
+}
+
+@media (max-width: 1150px) {
+  .headerInner {
+    gap: 18px;
+  }
+  .mainNav {
+    gap: 17px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .headerInner {
+    height: 80px;
+    justify-content: flex-start;
+  }
+  .brand img {
+    width: 82px;
+    height: 70px;
+  }
+  .headerBooking {
+    margin-left: auto;
+  }
+  .menuToggle {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid var(--border);
+    background: transparent;
+  }
+  .withoutBooking .menuToggle {
+    margin-left: auto;
+  }
+  .mainNav {
+    display: none;
+    position: absolute;
+    top: 80px;
+    inset-inline: 0;
+    padding: 16px 36px 28px;
+    background: var(--cream);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 18px 24px #183d3210;
+  }
+  .mainNav.isOpen {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: stretch;
+  }
+  .mainNav > a {
+    padding: 13px 0;
+    font-size: 14px;
+  }
+  .mainNav .mobileBooking {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--border);
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 420px) {
+  .headerInner {
+    gap: 12px;
+  }
+  .headerBooking {
+    padding: 10px 12px;
+    font-size: 10px;
+    gap: 10px;
+  }
+  .headerBooking svg {
+    width: 17px;
+  }
+}
+

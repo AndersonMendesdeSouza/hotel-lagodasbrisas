@@ -1,0 +1,247 @@
+.skipLink {
+  border: 0;
+  position: fixed;
+  top: -100px;
+  left: 20px;
+  z-index: 100;
+  padding: 14px;
+  background: var(--sand);
+  color: var(--green);
+}
+
+.skipLink:focus {
+  top: 10px;
+}
+
+.detailsPage {
+  padding-block: 30px 100px;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.breadcrumb a:hover {
+  color: var(--green);
+  text-decoration: underline;
+}
+
+.pageHeading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  padding-block: 43px 36px;
+}
+
+.pageHeading h1 {
+  font-size: clamp(48px, 5.4vw, 76px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+  margin-top: 15px;
+}
+
+.pageHeading p {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.pageHeading > a {
+  flex-shrink: 0;
+  font-size: 11px;
+}
+
+.photoNote {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.detailsLayout {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  align-items: start;
+  gap: 90px;
+  padding-top: 65px;
+}
+
+.roomInformation h2 {
+  font-size: clamp(38px, 3.5vw, 49px);
+  margin-top: 20px;
+}
+
+.roomInformation > p {
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 13px;
+  max-width: 500px;
+}
+
+.capacity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 26px;
+  font-size: 12px;
+}
+
+.capacity svg {
+  flex-shrink: 0;
+}
+
+.amenities {
+  margin-top: 35px;
+  padding-block: 30px;
+  border-block: 1px solid var(--border);
+}
+
+.amenities h3 {
+  font-size: 29px;
+}
+
+.amenities ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 28px;
+  margin: 25px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.amenities li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.demoNote {
+  padding-top: 25px;
+  color: var(--muted);
+}
+
+.demoNote strong {
+  font-size: 11px;
+  font-weight: 550;
+}
+
+.demoNote p {
+  font-size: 11px;
+  margin-top: 10px;
+}
+
+.bookingCard {
+  position: sticky;
+  top: 120px;
+  padding: 35px;
+  background: #efefe5;
+  border: 1px solid var(--border);
+}
+
+.bookingCard h2 {
+  font-size: clamp(36px, 3.4vw, 48px);
+  margin-top: 20px;
+}
+
+.bookingCard > p {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.bookingSummary {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-block: 22px;
+  margin-top: 25px;
+  border-top: 1px solid #d3d8cb;
+}
+
+.bookingSummary span {
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.bookingSummary strong {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.bookingCard > a {
+  width: 100%;
+  font-size: 11px;
+  gap: 12px;
+}
+
+.bookingCard small {
+  display: block;
+  font-size: 9px;
+  line-height: 1.8;
+  color: var(--muted);
+  margin-top: 16px;
+}
+
+.notFound {
+  padding-block: 100px;
+  min-height: 55svh;
+}
+
+.notFound h1 {
+  margin-block: 20px;
+  font-size: clamp(40px, 5vw, 66px);
+}
+
+.notFound p {
+  color: var(--muted);
+  margin-bottom: 25px;
+}
+
+@media (max-width: 1100px) {
+  .detailsLayout {
+    gap: 45px;
+  }
+
+  .bookingCard {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 760px) {
+  .detailsPage {
+    padding-block: 24px 65px;
+  }
+
+  .pageHeading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    padding-top: 30px;
+  }
+
+  .pageHeading h1 {
+    letter-spacing: -1.5px;
+  }
+
+  .detailsLayout {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding-top: 40px;
+  }
+
+  .bookingCard {
+    position: static;
+    padding: 28px 23px;
+  }
+
+  .bookingCard h2 {
+    font-size: 43px;
+  }
+}
